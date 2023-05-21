@@ -1,0 +1,24 @@
+---
+layout: default
+title: Marko on mies
+subtitle: joka ei pelkää keppanaa
+pagination:
+  data: collections.posts
+  size: 10
+  reverse: true
+  alias: posts
+---
+
+{% if site.heroSection %}
+  {% include "hero.njk" %}
+{% endif %}
+
+{% if site.projectSection %}
+  {% include "projects.njk" %}
+{% endif %}
+
+
+
+{% if pagination.items.length >= pagination.size %}
+  {% include "paginator.njk" %}
+{% endif %}
