@@ -2,13 +2,28 @@
 layout: base
 ---
 
-<div class="min-h-screen flex flex-col">
+<main class="min-h-screen flex flex-col">
 
-<main class="flex-1 w-10/12 max-w-screen-sm md:max-w-screen-md mx-auto">
+  <section class="py-32 bg-slate-300">
+  {% if subtitle != "" %}
+    <h1 class="text-5xl md:text-6xl font-black leading-tight text-center">
+    {{ title }}
+    </h1>
+    <p class="text-5xl md:text-6xl font-light pb-10 md:pb-20 leading-tight text-center">
+    {{ subtitle }}
+    </p>
 
-  {{ content |safe }}
+    {% else %}
+    <h1 class="text-5xl md:text-6xl font-black leading-tight text-center">
+    {{ title }}
+    </h1>
+  {% endif %}
+  </section>
 
+  <section class="flex-1 w-10/12 max-w-screen-sm md:max-w-screen-md mx-auto">
+  {% include "nav.njk" %}
+    {{ content |safe }}
+  </section>
+  {% include "footer.njk" %}
+  
 </main>
-
-{% include "footer.njk" %}
-</div>

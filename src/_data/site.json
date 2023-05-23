@@ -7,7 +7,7 @@
     "twitter": "",
     "linkedin": "",
     "toggleTheme": true,
-    "mainMenu": false,
-    "heroSection": true,
+    "mainMenu": true,
+    "authorSection": false,
     "projectSection": true
 }

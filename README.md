@@ -46,5 +46,4 @@ __```/src/_data/site.json```__ has some settings for the pages, you should confi
 
 ## TODO
 
-- [ ] Fix bug where `published = false` posts are still counted in the pagination -> unpublished posts will trigger pagination when it exceeds the pagination size but the amount of posts on the frontpage remains the same. Create a new collection from the published posts and use that for the pagination.
-
+- [x] Fix bug where `published = false` posts are still counted in the pagination -> unpublished posts will trigger pagination when it exceeds the pagination size but the amount of posts on the frontpage remains the same. Create a new collection from the published posts and use that for the pagination.
