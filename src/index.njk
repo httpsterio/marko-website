@@ -3,7 +3,7 @@ layout: default
 title: Marko on mies
 subtitle: joka ei pelkää keppanaa
 pagination:
-  data: collections.posts
+  data: collections.project
   size: 10
   reverse: true
   alias: posts
@@ -14,7 +14,7 @@ pagination:
 {% endif %}
 
 {% if site.projectSection %}
-  {% include "projects.njk" %}
+  {% include "project.njk" %}
 {% endif %}
 
 {% if pagination.items.length >= pagination.size %}

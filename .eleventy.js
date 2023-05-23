@@ -46,6 +46,19 @@ module.exports = function(eleventyConfig) {
     return Array.from(tagsSet).sort()
   })
 
+  // Custom collections
+  const now = new Date();
+
+  // Creates a const for all posts that are not drafts and publish date is either today or earlier.
+  const livePosts = project => project.date <= now && !project.data.draft;
+
+  eleventyConfig.addCollection("project", collection => {
+    return [
+      ...collection.getFilteredByGlob("./src/projects/*.md").filter(livePosts)
+    ].reverse();
+  });
+
+
   const md = markdownIt({ html: true, linkify: true })
   md.use(markdownItAnchor, { 
     level: [1, 2], 
