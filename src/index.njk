@@ -1,7 +1,7 @@
 ---
 layout: main
-title: Marko on mies
-subtitle: joka ei pelkää keppanaa
+title: Hello there!
+subtitle: I'm Marko Tuominen
 pagination:
   data: collections.project
   size: 5
@@ -13,8 +13,11 @@ pagination:
   {% include "author.njk" %}
 {% endif %}
 
-{% if site.projectSection %}
-  {% include "project.njk" %}
+
+{% if site.projectExcerpt %}
+  {% include "projectPosts.njk" %}
+{% else %}
+  {% include "projectSection.njk" %}
 {% endif %}
 
 {% if pagination.items.length >= pagination.size %}
