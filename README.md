@@ -22,9 +22,10 @@ If you edit the `.eleventy.js` or `tailwind.config.js`, you need to restart the 
 
 The `/src/index.njk` has the setting `pagination.size` for how many project posts are shown on the frontpage. The default value is 10. If you have more than 10 markdown files in `/src/posts`, it will add a page navigation at the bottom of the page.
 
-__```/src/_data/site.json```__ has some settings for the pages, you should configure these.
 
 ### site.json
+
+__```/src/_data/site.json```__ has some settings for the pages, you should also configure these.
 
 `name` is used for the author info and some meta fields.
 
@@ -42,8 +43,15 @@ __```/src/_data/site.json```__ has some settings for the pages, you should confi
 
 `heroSection` is used to show or hide the hero section.
 
-`projectSection` is used to toggle between showing projects on one page or as individual posts that link to the project page.
+`projectExcerpt` is used to determine if the front page shows the description for each project or if it'll show all the content. 
+
+### translations.json
+__```/src/_data/translations.json```__ has some key-value pairs for translating some links and text on the site.
 
 ## TODO
+
+- [ ] Fix math in calculating how many posts should trigger pagination display.
+
+- [x] Fix layout issue for project pages.
 
 - [x] Fix bug where `published = false` posts are still counted in the pagination -> unpublished posts will trigger pagination when it exceeds the pagination size but the amount of posts on the frontpage remains the same. Create a new collection from the published posts and use that for the pagination.

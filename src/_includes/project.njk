@@ -1,29 +1,20 @@
-<section>
-  <h1 class="text-5xl font-black py-8">Projects</h1>
-{% for project in pagination.items %}
-{% if project.data.published %}
-<div class="p-8 my-4 bg-slate-300">
-  <p>
-    <span class="text-2xl sm:text-4xl font-bold hover:text-blue-700 leading-tight"><a href="{{ project.url }}">{{ project.data.title }}</a></span>
-  </p>
-  <p class="mt-4">{{ project.data.post_excerpt }}...</p>
-  
-  <div class="flex justify-between items-center mt-4">
-    <div class="flex-1 pr-4">
-      {% for tag in project.data.tags %}
-        {% if tag != "posts" %}
-          <a href="/tags/{{ tag }}" class="">
-            <div class="post-tag">{{ tag }}</div>
-          </a>
-        {% endif %}
-      {% endfor %}
-    </div>
+---
+layout: page
+---
+<h1 class="text-5xl md:text-6xl font-black pt-10 md:pt-30 pb-4 leading-tight">
+    {{ title}}
+</h1>
 
-    <a class="flex-none hover:underline font-semibold text-blue-700" href="{{ project.url }}">Read more &rarr;</a>
+<div class="mt-3 pb-10">
+  {% for tag in tags %}
+    <a href="/tags/{{ tag }}">
+      <span class="post-tag">{{ tag }}</span>
+    </a>
+  {% endfor %}
   </div>
 
+<div class="prose dark:prose-invert hover:prose-a:text-blue-500">
+  {{ content | safe }}
 </div>
 
-{% endif %}
-{% endfor %}
-</section>
+{% include "author.njk" %}

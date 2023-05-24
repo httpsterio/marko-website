@@ -1,0 +1,26 @@
+<section>
+  <h1 class="text-5xl font-black py-8">Projects</h1>
+{% for project in pagination.items %}
+{% if project.data.published %}
+<div class="p-8 my-4 bg-white dark:bg-gray-900">
+  <p>
+    <span class="text-2xl sm:text-4xl font-bold hover:text-blue-700 leading-tight"><a href="{{ project.url }}">{{ project.data.title }}</a></span>
+  </p>
+  <article class="mt-4 prose dark:prose-invert hover:prose-a:text-blue-500">{{project.data.description | safe}}</article>
+  
+  <div class="flex justify-between items-center mt-4">
+    <div class="flex-1 pr-4">
+      {% for tag in project.data.tags %}
+        <a href="/tags/{{ tag }}" class="">
+          <div class="post-tag">{{ tag }}</div>
+        </a>
+      {% endfor %}
+    </div>
+
+    <a class="flex-none hover:underline font-semibold text-blue-700" href="{{ project.url }}"> {{translations.readMore | safe }} &rarr;</a>
+  </div>
+
+</div>
+{% endif %}
+{% endfor %}
+</section>
