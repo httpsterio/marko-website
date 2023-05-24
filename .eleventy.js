@@ -60,13 +60,13 @@ module.exports = function(eleventyConfig) {
 
 
   const md = markdownIt({ html: true, linkify: true })
-  md.use(markdownItAnchor, { 
-    level: [1, 2], 
-    permalink: markdownItAnchor.permalink.headerLink({ 
-      safariReaderFix: true,
-      class: 'header-anchor',
-    })
-  })
+  // md.use(markdownItAnchor, { 
+  //   level: [1, 2], 
+  //   permalink: markdownItAnchor.permalink.headerLink({ 
+  //     safariReaderFix: true,
+  //     class: 'header-anchor',
+  //   })
+  // })
   eleventyConfig.setLibrary('md', md)
 
   // creates a shortcode that allows inserting images with alt-texts. Usage {% asset_img 'imagename','alt-text' %}
