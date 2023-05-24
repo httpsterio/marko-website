@@ -1,9 +1,9 @@
 {% if site.mainMenu %}
 <nav>
-  <ul class="flex py-4 border-b-2 mb-6">
-    <li class="mr-6 font-bold"><a href="/">Home</a></li>
-    <li class="mr-6 font-bold"><a href="/about">About</a></li>
-    {%if site.toggleTheme%}<li class="mr-0 font-bold ml-auto"><span class="cursor-pointer" id="toggleDarkMode">Dark mode</spam></li>{%endif%} 
+  <ul class="flex py-4 border-b-2 border-black dark:border-white mb-6">
+    <li class="mr-6 font-bold"><a href="/">{{translations.home}}</a></li>
+    <li class="mr-6 font-bold"><a href="/about">{{translations.about}}</a></li>
+    {%if site.toggleTheme%}<li class="mr-0 font-bold ml-auto"><span class="cursor-pointer" id="toggleDarkMode">{{translations.darkMode}}</spam></li>{%endif%} 
   </ul>
 </nav>
 {%endif%}
