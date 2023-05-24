@@ -1,16 +1,12 @@
 {
-    "name": "Sami Mäkelä",
+    "name": "Marko Tuominen",
     "url": "https://github.com/httpsterio",
-    "title": "My Blog",
-    "description": "Welcome to my blog",
-    "github": "https://github.com/httpsterio",
-    "twitter": "",
-    "linkedin": "",
+    "title": "Marko Tuominen",
+    "description": "I'm a game dev. You should hire me.",
+    "github": "https://github.com/f1nde",
+    "linkedin": "https://www.linkedin.com/in/tuominenmarko/",
     "toggleTheme": true,
     "mainMenu": true,
     "authorSection": false,
-    "projectExcerpt": true,
-    "translations": [
-        {"readmore": "Lue lisää"}
-    ]
+    "projectExcerpt": false
 }
