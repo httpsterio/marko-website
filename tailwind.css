@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+
+  .bg-gradient-light {
+    background: radial-gradient(circle, rgba(255,136,197,1) 0%, rgba(246,186,134,1) 21%, rgba(255,209,126,1) 34%, rgba(0,212,255,1) 100%);
+  }
+  
+  .bg-gradient-dark {
+    background: #161616;
+  }
+
+  .background-animate-light {
+    background-size: 600%;
+  
+    -webkit-animation: cycleColors 15s ease infinite;
+    -moz-animation: cycleColors 15s ease infinite;
+    animation: cycleColors 15s ease infinite;
+  }
+  
+  @keyframes cycleColors {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+}
+
 .paginator-text {
   @apply text-gray-600 font-bold py-2 px-4;
 }
