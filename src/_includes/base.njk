@@ -17,14 +17,14 @@
     <noscript><link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"></noscript>
     <link href="/assets/styles/tailwind.css" rel="stylesheet" />
     <link href="/assets/styles/index.css" rel="stylesheet" />
-    <script>
-      const isDarkMode = () => localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
-      if (isDarkMode()) {
-        document.documentElement.classList.add('dark')
-      } else {
-        document.documentElement.classList.remove('dark')
-      }
-    </script>
+<script>
+  const isDarkMode = () => localStorage.theme === 'dark';
+  if (isDarkMode()) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+</script>
   </head>
 
   <body class="dark:text-white overflow-x-scroll bg-gradient-light dark:bg-gradient-dark background-animate-light dark:background-animate-dark">
