@@ -9,5 +9,8 @@
     "toggleTheme": true,
     "mainMenu": true,
     "authorSection": false,
-    "projectSection": true
+    "projectExcerpt": true,
+    "translations": [
+        {"readmore": "Lue lisää"}
+    ]
 }
