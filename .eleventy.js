@@ -14,13 +14,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/assets')
   eleventyConfig.addPassthroughCopy('src/manifest.json')
 
-  // To create excerpts
-  eleventyConfig.setFrontMatterParsingOptions({
-    excerpt: true,
-    excerpt_alias: 'post_excerpt',
-    excerpt_separator: '<!-- excerpt -->'
-  })
-
   // To create a filter to determine duration of post
   eleventyConfig.addFilter('readTime', (value) => {
     const content = value

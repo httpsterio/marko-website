@@ -5,8 +5,8 @@
     "description": "I'm a game dev. You should hire me.",
     "github": "https://github.com/f1nde",
     "linkedin": "https://www.linkedin.com/in/tuominenmarko/",
-    "toggleTheme": true,
+    "toggleTheme": false,
     "mainMenu": true,
-    "authorSection": false,
-    "projectExcerpt": false
+    "authorSection": true,
+    "projectExcerpt": true
 }
