@@ -3,8 +3,11 @@ layout: base
 ---
 
 <main class="min-h-screen flex flex-col">
+  <section class="flex-1 w-10/12 max-w-screen-sm md:max-w-screen-md mx-auto">
+  {% include "nav.njk" %}
+  </section>
 
-  <section class="py-32">
+  <section class="py-24">
   {% if subtitle != "" %}
     <h1 class="text-5xl md:text-6xl font-black leading-tight text-center">
     {{ title }}
@@ -21,7 +24,6 @@ layout: base
   </section>
 
   <section class="flex-1 w-10/12 max-w-screen-sm md:max-w-screen-md mx-auto">
-  {% include "nav.njk" %}
     {{ content |safe }}
   </section>
   {% include "footer.njk" %}

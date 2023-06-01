@@ -12,6 +12,12 @@
     background: #161616;
   }
 
+  .glass-bg {
+    background: rgba(151, 254, 232, 0.35);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+  }
+
   .background-animate-light {
     background-size: 600%;
   
