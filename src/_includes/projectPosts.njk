@@ -2,7 +2,7 @@
   <h1 class="text-5xl font-black py-8">Projects</h1>
 {% for project in pagination.items %}
 {% if project.data.published %}
-<div class="p-8 my-4 bg-white dark:bg-gray-900">
+<div class="p-8 my-8 rounded-lg shadow-xl glass-bg dark:bg-gray-900">
   <p>
     <span class="text-2xl sm:text-4xl font-bold hover:text-blue-700 leading-tight"><a href="{{ project.url }}">{{ project.data.title }}</a></span>
   </p>
