@@ -2,25 +2,25 @@
   <h1 class="text-5xl font-black py-8">Projects</h1>
 {% for project in pagination.items %}
 {% if project.data.published %}
-<div class="p-8 my-8 rounded-lg shadow-xl glass-bg dark:bg-gray-900">
+<a href="{{ project.url }}">
+<div class="p-8 my-8 rounded-lg shadow-xl glass-bg border-transparent border-2 hover:border-black dark:bg-gray-900">
   <p>
-    <span class="text-2xl sm:text-4xl font-bold hover:text-blue-700 leading-tight"><a href="{{ project.url }}">{{ project.data.title }}</a></span>
+    <span class="text-2xl sm:text-4xl font-bold hover:text-blue-700 leading-tight">{{ project.data.title }}</span>
   </p>
   <article class="mt-4 prose dark:prose-invert hover:prose-a:text-blue-500">{{project.data.description | safe}}</article>
   
   <div class="flex justify-between items-center mt-4">
-    <div class="flex-1 pr-4">
+    <div class="flex-1">
       {% for tag in project.data.tags %}
-        <a href="/tags/{{ tag }}" class="">
-          <div class="post-tag">{{ tag }}</div>
-        </a>
+          <div class="post-tag project-tag text-dark">{{ tag }}</div>
       {% endfor %}
     </div>
 
-    <a class="flex-none hover:underline font-semibold text-blue-700" href="{{ project.url }}"> {{translations.readMore | safe }} &rarr;</a>
+    {# <a class="flex-none hover:underline font-semibold text-blue-700" href="{{ project.url }}"> {{translations.readMore | safe }} &rarr;</a> #}
   </div>
 
 </div>
+</a>
 {% endif %}
 {% endfor %}
 </section>
