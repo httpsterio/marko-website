@@ -3,8 +3,8 @@ layout: main
 title: Hello there!
 subtitle: I'm Marko Tuominen
 pagination:
-  data: collections.project
-  size: 5
+  data: collections.all
+  size: 999
   reverse: true
   alias: posts
 ---
@@ -15,8 +15,10 @@ pagination:
 
 {% if site.projectExcerpt %}
   {% include "projectPosts.njk" %}
+  {% include "hobbyPosts.njk" %}
 {% else %}
   {% include "projectSection.njk" %}
+  {% include "hobbySection.njk" %}
 {% endif %}
 
 {% if pagination.items.length >= pagination.size %}

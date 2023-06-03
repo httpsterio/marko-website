@@ -27,18 +27,6 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat('yyyy-MM-dd');
   })
 
-  // Enable us to iterate over all the tags, excluding posts and all
-  eleventyConfig.addCollection('tagList', collection => {
-    const tagsSet = new Set()
-    collection.getAll().forEach(item => {
-      if (!item.data.tags) return
-      item.data.tags
-        .filter(tag => !['posts', 'all'].includes(tag))
-        .forEach(tag => tagsSet.add(tag))
-    })
-    return Array.from(tagsSet).sort()
-  })
-
   // Custom collections
   const now = new Date();
 
@@ -47,7 +35,13 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addCollection("project", collection => {
     return [
-      ...collection.getFilteredByGlob("./src/projects/*.md").filter(livePosts)
+      ...collection.getFilteredByGlob("./src/posts/projects/*.md").filter(livePosts)
+    ].reverse();
+  });
+
+  eleventyConfig.addCollection("hobby", collection => {
+    return [
+      ...collection.getFilteredByGlob("./src/posts/hobby/*.md").filter(livePosts)
     ].reverse();
   });
 

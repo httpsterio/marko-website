@@ -1,6 +1,6 @@
-<section class="py-16">
-  <h1 class="text-5xl font-black py-8 flex justify-center">Professional projects</h1>
-{% for project in collections.project %}
+<section>
+  <h1 class="text-5xl font-black py-8 flex justify-center">Hobby projects</h1>
+{% for project in collections.hobby %}
 {% if project.data.published %}
 <a href="{{ project.url }}">
 <div class="p-8 my-8 rounded-lg transform hover:-translate-y-4 shadow-md glass-bg border-transparent border-2 hover:shadow-2xl dark:bg-gray-900">

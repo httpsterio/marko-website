@@ -1,6 +1,6 @@
 <section>
   <h1 class="text-5xl font-black py-8">Projects</h1>
-{% for project in collections.project %}
+{% for project in pagination.items %}
 {% if project.data.published %}
 <div class="p-8 my-8 bg-white dark:bg-gray-900">
   <p>
