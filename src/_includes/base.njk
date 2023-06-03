@@ -31,18 +31,7 @@
 
   <body id="bg-fog" class="dark:text-white overflow-x-scroll">
     {{ content | safe }}
-    
-  <script>
-    document.getElementById("toggleDarkMode").addEventListener("click", function() {
-      if (isDarkMode()) {
-        localStorage.theme = 'light'
-        document.documentElement.classList.remove('dark')
-      } else {
-        localStorage.theme = 'dark'
-        document.documentElement.classList.add('dark')
-      }
-    });
-  </script>
+
   <script>
     addEventListener("load", (event) => {});
     onload = (event) => {
@@ -58,7 +47,7 @@
         blurFactor: 0.37,
         speed: 0.30,
         zoom: 0.80
-    })
+    });
   };
 </script>
   </body>
