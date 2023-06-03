@@ -25,3 +25,12 @@ color: hotpink;
 .nav-active::before {
 content: '> ';
 }
+
+.social-icon {
+  fill: blue;
+  display: inline-block;
+}
+
+.social-icon:hover {
+  fill: hotpink;
+}
