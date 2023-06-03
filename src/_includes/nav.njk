@@ -1,11 +1,12 @@
 {% if site.mainMenu %}
 <nav>
-  <ul class="flex py-4 border-b-2 border-black dark:border-white mb-6">
-    <li class="mr-6 font-bold"><a href="/">{{translations.home}}</a></li>
-    <li class="mr-6 font-bold"><a href="/about">{{translations.about}}</a></li>
+  <ul class="flex py-4 border-b-2 border-black dark:border-white mb-6 font-bold">
+    <li class="{% if page.url == '/' %} nav-active font-black {%endif%} mr-6"><a href="/">{{translations.home}}</a></li>
+    <li class="{% if page.url == '/about/' %} nav-active font-black {%endif%} mr-6"><a href="/about">{{translations.about}}</a></li>
     <li class="mr-0 ml-auto font-bold"><a href="https://github.com/f1nde">Github</a></li>
     <li class="mr-0 ml-6 font-bold"><a href="https://www.linkedin.com/in/tuominenmarko/">LinkedIn</a></li>
     {%if site.toggleTheme%}<li class="mr-0 font-bold ml-auto"><span class="cursor-pointer" id="toggleDarkMode">{{translations.darkMode}}</spam></li>{%endif%} 
   </ul>
 </nav>
+
 {%endif%}

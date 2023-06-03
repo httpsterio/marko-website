@@ -17,3 +17,11 @@ h2 > a.header-anchor {
 .project-tag {
 background: linear-gradient(to right bottom, rgb(153, 246, 228), rgb(101, 197, 181))
 }
+
+.nav-active {
+color: hotpink;
+}
+
+.nav-active::before {
+content: '> ';
+}
