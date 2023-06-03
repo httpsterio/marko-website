@@ -30,7 +30,7 @@ module.exports = {
         },
       },
       typography: ({ theme }) => ({
-        custom: {
+        arctic: {
           css: {
             '--tw-prose-body': theme('colors.pink[800]'),
             '--tw-prose-headings': theme('colors.pink[900]'),
