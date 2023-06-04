@@ -3,13 +3,11 @@
       <div class="relative block rounded-lg shadow-2xl p-6 glass-bg">
         <div class="flex flex-row items-center justify-center">
           <div class="grow-0 shrink-0 basis-auto hidden md:flex w-4/12 pr-0 md:pr-6">
-              <img srcset="/assets/img/marko@1x.png 210w, /assets/img/marko@2x.png 420w"
-              sizes="(max-width: 420px) 210px, 420px"
-              src="/assets/marko@2x.png"
-              alt="Marko Tuominen's avatar"
-              width="210px"
-              height="221px" 
-              />
+            <picture>
+              <source srcset="/assets/img/marko@1x.webp" type="image/webp">
+              <source srcset="/assets/img/marko@1x.png" type="image/jpeg">
+              <img src="/assets/img/marko@1x.png">
+            </picture>
           </div>
           <div class="grow-0 shrink-0 basis-auto w-10/12 md:w-7/12">
             <h1 class="text-lg font-bold mb-2">Hi, I'm Marko, game developer extraordinaire</h5>
