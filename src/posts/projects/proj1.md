@@ -1,6 +1,6 @@
 ---
 title: projekti1
-description: toinen postaus
+description: toinen postaus. Tähänkin pidempi description, että näkee miten leiska käyttäytyy sitten isolla ruudulla. Tällä hetkellä tää on aika rikki. toinen postaus. Tähänkin pidempi description, että näkee miten leiska käyttäytyy sitten isolla ruudulla. Tällä hetkellä tää on aika rikki.
 date: 2020-01-01
 draft: false
 order: 1

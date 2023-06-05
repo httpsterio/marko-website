@@ -1,6 +1,6 @@
 ---
 title: projekti2
-description: lyhyt testikuvaus
+description: vähän pidempi kuvaus jossa on enemmän sanoja ja menee ehkä kolmelle riville? Ehkä, en osaa sanoa. Kuitenkin, tässä on multiline description. Vielä vähän lisää tekstiä niin riittää.
 date: 2018-01-01
 draft: false
 tags:
