@@ -3,6 +3,7 @@ title: hobby1
 description: lyhyt testikuvaus
 date: 2018-01-01
 draft: false
+thumbImage: "https://placehold.co/300x300"
 tags:
 - c++
 - csharp

@@ -1,24 +1,26 @@
-<section>
-  <h1 class="text-3xl xs:text-4xl sm:text-5xl font-black py-8 flex text-center justify-center">Hobby projects</h1>
+<section class="pt-32">
+  <h1 class="text-3xl xs:text-4xl sm:text-5xl font-black py-8 flex justify-center text-center">Hobby projects</h1>
+
 {% for project in collections.hobby %}
 {% if project.data.published %}
-<a href="{{ project.url }}">
-<div class="p-8 my-8 rounded-lg transform hover:-translate-y-4 shadow-md glass-bg border-transparent border-2 hover:shadow-2xl dark:bg-gray-900">
-  <p>
-    <span class="text-2xl sm:text-4xl font-bold leading-tight">{{ project.data.title }}</span>
-  </p>
-  <article class="mt-4 prose prose-arctic dark:prose prose-arctic-invert">{{project.data.description | safe}}</article>
-  
-  <div class="flex justify-between items-center mt-4">
-    <div class="flex-1">
-      {% for tag in project.data.tags %}
-          <div class="post-tag project-tag text-dark">{{ tag }}</div>
-      {% endfor %}
-    </div>
-  </div>
-
-</div>
-</a>
+  <a href="{{ project.url }}">
+    <article class="mt-16 flex rounded-lg transform hover:-translate-y-4 shadow-md glass-bg border-transparent border-2 hover:shadow-2xl dark:bg-gray-900">
+      <figure class="m-4 hidden sm:block aspect-square w-60">
+        <img class="max-h-full aspect-square" src="{{ project.data.thumbImage }}" alt="thumbnail for {{project.data.title}}">
+      </figure>
+      <section class="flex flex-col justify-between p-4">
+        <section>
+          <h1 class="text-3xl sm:text-4xl font-bold leading-tight block">{{ project.data.title }}</h1>
+          <p class="my-4 prose prose-arctic dark:prose prose-arctic-invert block">{{project.data.description | safe}}</p>
+        </section>
+          <ul>
+            {% for tag in project.data.tags %}
+              <li class="post-tag project-tag text-dark">{{ tag }}</li>
+            {% endfor %}
+          </ul>
+      </section>
+    </article>
+  </a>
 {% endif %}
 {% endfor %}
 </section>

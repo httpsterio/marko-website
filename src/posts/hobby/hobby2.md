@@ -3,7 +3,7 @@ title: hobby2
 description: toinen postaus
 date: 2020-01-01
 draft: false
-order: 1
+thumbImage: "https://placehold.co/300x300"
 tags:
 - Unity
 - shooter

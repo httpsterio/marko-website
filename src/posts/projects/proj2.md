@@ -3,6 +3,7 @@ title: projekti2
 description: vähän pidempi kuvaus jossa on enemmän sanoja ja menee ehkä kolmelle riville? Ehkä, en osaa sanoa. Kuitenkin, tässä on multiline description. Vielä vähän lisää tekstiä niin riittää.
 date: 2018-01-01
 draft: false
+thumbImage: "https://placehold.co/300x300"
 tags:
 - c++
 - csharp
